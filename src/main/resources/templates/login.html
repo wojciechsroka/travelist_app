@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mkyong Wildfly Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 1px;
+        }
+    </style>
+    <!--  END STYLE -->
+
+</head>
+<body>
+    <form action="#" th:action="@{/login}"
+    method="POST">
+
+        <h2>Logowanie</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Login</th>
+                    <th>Haslo</th>
+                    <td>&nbsp;</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input name="login"/>
+                    </td>
+                    <td>
+                        <input name="password"/>
+                    </td>
+                    <td>
+                        <input type="submit"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- META SECTION -->
+    <title>Mkyong Wildfly Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- END META SECTION -->
+    <!--  BEGIN STYLE -->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 1px;
+        }
+    </style>
+    <!--  END STYLE -->
+
+</head>
+<body>
+<header id="header" class="alt" th:include="menu :: title-menu" />
+    <th:form th:action="@{/update}" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        Login
+                    </td>
+                    <td>
+                        Hasło
+                    </td>
+                    <td>
+                        Aktywny
+                    </td>
+                    <td>
+                        Zarzadzanie
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <td th:text="${user.login}"/>
+                </td>
+                <td>
+                    ...
+                </td>
+                <td th:text="${user.isActive}">
+
+                </td>
+                <td>
+                    <a th:href="@{'/user/block?id=' + ${user.id}}">
+                        Zmien status
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </th:form>
+
+</body>
+</html>
